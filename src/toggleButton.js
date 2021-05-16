@@ -72,7 +72,7 @@ function ToggleButton() {
             <h3>Buy Mode</h3>
             <p>Latest obtained Exchange Rate for date {data.latestAPIDate} is {data.todaysExchange}</p>
             <p>the median of the exchange rate of approximately last 30 days, {data.median}</p> 
-            <p>{!data.display=='profitable'? <p className="profit">Since today's Exchange Rate is lesser than median, its not profitable to Buy</p>:<p className="profit">Since today's Exchange Rate is lesser than median, its profitable to Buy</p>}
+            <p>{!data.display=='profitable'? <p className="profit">Since today's Exchange Rate is lesser than median, its Profitable to Buy</p>:<p className="profit">Since today's Exchange Rate is greater than median, its Not profitable to Buy</p>}
              </p>
             </div>
         ):(
@@ -80,7 +80,7 @@ function ToggleButton() {
             <h3>Sell Mode</h3>
             <p>Latest obtained Exchange Rate for date {data.latestAPIDate} is {data.todaysExchange}</p>
             <p>the median of the exchange rate of approximately last 30 days, {data.median}</p> 
-            <p>{!data.display=='profitable'? <p className="profit">Since today's Exchange Rate is lesser than median, its profitable to Sell</p>:<p className="profit">Since today's Exchange Rate is lesser than median, its not profitable to Sell</p>}
+            <p>{!data.display=='profitable'? <p className="profit">Since today's Exchange Rate is lesser than median, its Not profitable to Sell</p>:<p className="profit">Since today's Exchange Rate is greater than median, its Profitable to Sell</p>}
              </p>
             </div>
         )}
