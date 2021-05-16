@@ -20,7 +20,7 @@ const data = {
   labels: labels_data,
   datasets: [
     {
-      label: 'Exchange Rate from USD to CAD',
+      label: 'Exchange Rate from CAD to USD',
       data: labels_data_y,
       fill: false,
       backgroundColor: 'rgb(255, 99, 132)',
