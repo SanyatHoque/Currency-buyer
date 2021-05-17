@@ -44,8 +44,13 @@ function ToggleButton() {
             let today = new Date().toISOString().slice(8, 10)
             let month = new Date().toISOString().slice(5, 7)
             // today's exchange rate 
-            const backup_today = display_data.rates[`2021-${month}-${today-1}`]==undefined ? 2:3; 
-            // console.log('backup_today',backup_today)
+            if (display_data.rates[`2021-${month}-${today-1}`]==undefined) {
+                var backup_today = 2;}
+            if (display_data.rates[`2021-${month}-${today-2}`]==undefined) {
+                var backup_today = 3;}
+            if (display_data.rates[`2021-${month}-${today-1}`]==undefined) {
+                var backup_today = 4;}
+            console.log('backup_today',backup_today)
             const latestAPIDate = `2021-${month}-${today-backup_today}`;
             const todaysExchange = display_data.rates[`2021-${month}-${today-backup_today}`].USD;
             const display = (todaysExchange - median) > 0 ?  'profitable' : 'not profitable';
